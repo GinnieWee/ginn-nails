@@ -43,11 +43,11 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-widest mb-5">Contact</h4>
             <ul className="flex flex-col gap-3 text-sm text-[#8C7B74]">
-              <li>123 Beauty Lane, Sukhumvit</li>
-              <li>Bangkok 10110</li>
+              <li>No.127 Lorong Bukit Idaman 3</li>
+              <li>Taman Bukit Idaman, 27600 Raub, Pahang</li>
               <li>
-                <a href="tel:+66812345678" className="hover:text-[#C9A09A] transition-colors">
-                  +66 81 234 5678
+                <a href="tel:+601125784475" className="hover:text-[#C9A09A] transition-colors">
+                  +60 11 2578 4475
                 </a>
               </li>
               <li>
