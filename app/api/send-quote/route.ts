@@ -2,8 +2,6 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { fetchQuoteById, updateQuoteStatus } from '../../../lib/db';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const fmt = (n: number) =>
   'RM ' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
@@ -136,14 +134,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'quoteId is required' }, { status: 400 });
     }
 
-    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 're_placeholder') {
+    const apiKey = (process.env.RESEND_API_KEY ?? '').trim();
+    if (!apiKey || apiKey === 're_placeholder') {
       return NextResponse.json({ error: 'RESEND_API_KEY is not configured.' }, { status: 500 });
     }
 
-    const quote = await fetchQuoteById(quoteId);
-    const html  = buildEmailHtml(quote);
+    const resend = new Resend(apiKey);
+    const quote  = await fetchQuoteById(quoteId);
+    const html   = buildEmailHtml(quote);
 
-    const from = process.env.RESEND_FROM_EMAIL || "Le Ginn's Manicure <onboarding@resend.dev>";
+    const from = (process.env.RESEND_FROM_EMAIL ?? '').trim() || "Le Ginn Manicure <onboarding@resend.dev>";
 
     const { error } = await resend.emails.send({
       from,
