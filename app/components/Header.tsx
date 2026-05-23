@@ -7,7 +7,7 @@ export default function Header() {
         {/* Logo area */}
         <a href="#" className="flex items-center gap-3">
           <Image
-            src="/logo.png"
+            src="/logo.jpg"
             alt="Le Ginn's Nails logo"
             width={40}
             height={40}
@@ -24,7 +24,8 @@ export default function Header() {
         {/* Nav links */}
         <nav className="hidden sm:flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] text-[#6B4C40]">
           <a href="#services" className="nav-link hover:text-[#C9A09A] transition-colors">Services</a>
-          <a href="#reviews" className="nav-link hover:text-[#C9A09A] transition-colors">Reviews</a>
+          <a href="#designs" className="nav-link hover:text-[#C9A09A] transition-colors">Designs</a>
+          <a href="#about" className="nav-link hover:text-[#C9A09A] transition-colors">About</a>
           <a href="#contact" className="nav-link hover:text-[#C9A09A] transition-colors">Contact</a>
         </nav>
 

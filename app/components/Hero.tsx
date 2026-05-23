@@ -11,26 +11,26 @@ export default function Hero() {
         {/* Left — staggered text entrance */}
         <div>
           <p
-            className="text-[10px] uppercase tracking-[0.35em] text-[#8C7B74] mb-8"
+            className="text-[10px] uppercase tracking-[0.35em] text-[#C9A09A] mb-8"
             style={{ animation: "fade-up 0.6s ease 0.1s both" }}
           >
-            Nail Artist &nbsp;·&nbsp; By Appointment
+            Nail Artist &nbsp;·&nbsp; Kuala Lumpur
           </p>
           <h1
             className="text-[3.5rem] md:text-[4.5rem] font-bold leading-[1.05] text-[#3D2B20] mb-8"
             style={{ fontFamily: "var(--font-serif)" }}
           >
             <span className="block" style={{ animation: "fade-up 0.7s ease 0.2s both" }}>
-              Your nails,
+              Your Dream
             </span>
             <span
               className="block italic text-[#C9A09A]"
               style={{ animation: "fade-up 0.7s ease 0.35s both" }}
             >
-              beautifully
+              Nails
             </span>
             <span className="block" style={{ animation: "fade-up 0.7s ease 0.5s both" }}>
-              done.
+              Start Here.
             </span>
           </h1>
           <div
@@ -41,7 +41,7 @@ export default function Hero() {
             className="text-base text-[#6B4C40] leading-relaxed mb-10 max-w-sm"
             style={{ animation: "fade-up 0.7s ease 0.7s both" }}
           >
-            Le Ginn&apos;s Nails is a calm, intimate nail studio where craft and care come first. Every visit is a moment for you.
+            The nail appointment you&apos;ve been waiting for. Sit back, pick your design, and let us take care of the rest.
           </p>
           <div
             className="flex flex-col sm:flex-row gap-3"

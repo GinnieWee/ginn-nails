@@ -12,7 +12,7 @@ const photos = [
 
 export default function Gallery() {
   return (
-    <section className="bg-[#FAF7F2] py-24">
+    <section id="designs" className="bg-[#FAF7F2] py-24">
       <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">

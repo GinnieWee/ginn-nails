@@ -7,7 +7,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.png" alt="Le Ginn's Nails" className="w-9 h-9 rounded-full object-cover" />
+              <img src="/logo.jpg" alt="Le Ginn's Nails" className="w-9 h-9 rounded-full object-cover" />
               <span className="text-xl font-semibold text-white" style={{ fontFamily: "var(--font-serif)" }}>
                 Le Ginn&apos;s Nails
               </span>
@@ -33,9 +33,9 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-white uppercase tracking-widest mb-5">Quick Links</h4>
             <ul className="flex flex-col gap-3 text-sm text-[#8C7B74]">
               <li><a href="#services" className="hover:text-[#C9A09A] transition-colors">Services</a></li>
-              <li><a href="#reviews" className="hover:text-[#C9A09A] transition-colors">Reviews</a></li>
+              <li><a href="#designs" className="hover:text-[#C9A09A] transition-colors">Designs</a></li>
+              <li><a href="#about" className="hover:text-[#C9A09A] transition-colors">About</a></li>
               <li><a href="#contact" className="hover:text-[#C9A09A] transition-colors">Contact Us</a></li>
-              <li><a href="#contact" className="hover:text-[#C9A09A] transition-colors">Book Appointment</a></li>
             </ul>
           </div>
 
