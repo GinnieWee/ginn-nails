@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -57,13 +57,13 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-56 min-h-screen flex flex-col flex-shrink-0" style={{ backgroundColor: '#3D2B20' }}>
+    <aside className="w-56 min-h-screen flex flex-col flex-shrink-0" style={{ backgroundColor: '#2D1912' }}>
       {/* Brand */}
       <div className="px-6 py-6 border-b" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
         <div className="text-white font-semibold text-base tracking-tight" style={{ fontFamily: 'var(--font-serif)' }}>
           Le Ginn&apos;s
         </div>
-        <div className="text-xs mt-0.5" style={{ color: '#C9A09A' }}>Manicure Admin</div>
+        <div className="text-xs mt-0.5" style={{ color: '#C8705A' }}>Manicure Admin</div>
       </div>
 
       {/* Nav */}
@@ -78,7 +78,7 @@ export default function Sidebar() {
               className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors"
               style={{
                 backgroundColor: isActive ? 'rgba(201,160,154,0.15)' : 'transparent',
-                color: isActive ? '#C9A09A' : 'rgba(255,255,255,0.55)',
+                color: isActive ? '#C8705A' : 'rgba(255,255,255,0.55)',
               }}
             >
               <span className="flex-shrink-0">{icon}</span>

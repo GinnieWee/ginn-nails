@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import {
@@ -12,8 +12,8 @@ type Status = QuoteStatus | 'All';
 const STATUS_TABS: Status[] = ['All', 'Draft', 'Sent', 'Accepted', 'Rejected'];
 
 const statusStyle: Record<QuoteStatus, { bg: string; color: string; dot: string }> = {
-  Draft:    { bg: '#F0EAE0', color: '#8C7B74', dot: '#C9A09A' },
-  Sent:     { bg: '#E8D5D0', color: '#6B4C40', dot: '#A0706A' },
+  Draft:    { bg: '#F5ECE4', color: '#896B5E', dot: '#C8705A' },
+  Sent:     { bg: '#EDD0C0', color: '#5A3828', dot: '#A8522E' },
   Accepted: { bg: '#DFF0E4', color: '#3A6B4A', dot: '#5A9A6A' },
   Rejected: { bg: '#F0E0E0', color: '#8C3A3A', dot: '#C97070' },
 };
@@ -71,15 +71,15 @@ export default function QuoteRecordsPage() {
       <div className="p-8 max-w-5xl">
         <div className="flex items-start justify-between mb-8">
           <div>
-            <h1 className="text-2xl font-semibold" style={{ fontFamily: 'var(--font-serif)', color: '#3D2B20' }}>
+            <h1 className="text-2xl font-semibold" style={{ fontFamily: 'var(--font-serif)', color: '#2D1912' }}>
               Quote Records
             </h1>
-            <p className="text-sm mt-1" style={{ color: '#8C7B74' }}>
+            <p className="text-sm mt-1" style={{ color: '#896B5E' }}>
               {loading ? 'Loading…' : `${quotes.length} quotes total`}
             </p>
           </div>
           <Link href="/admin/create-quote" className="px-4 py-2 text-sm font-medium rounded-lg"
-            style={{ backgroundColor: '#3D2B20', color: '#fff' }}>
+            style={{ backgroundColor: '#2D1912', color: '#fff' }}>
             + New Quote
           </Link>
         </div>
@@ -95,64 +95,64 @@ export default function QuoteRecordsPage() {
               <button key={s} onClick={() => setFilter(s)}
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
                 style={{
-                  backgroundColor: isActive ? '#3D2B20' : '#F0EAE0',
-                  color:           isActive ? '#fff'    : '#6B4C40',
-                  border:          isActive ? 'none'    : '1px solid #E8D5D0',
+                  backgroundColor: isActive ? '#2D1912' : '#F5ECE4',
+                  color:           isActive ? '#fff'    : '#5A3828',
+                  border:          isActive ? 'none'    : '1px solid #EDD0C0',
                 }}>
                 {!isAll && style && (
                   <span className="w-1.5 h-1.5 rounded-full"
-                    style={{ backgroundColor: isActive ? '#C9A09A' : style.dot }} />
+                    style={{ backgroundColor: isActive ? '#C8705A' : style.dot }} />
                 )}
                 {s}
-                <span style={{ color: isActive ? 'rgba(255,255,255,0.55)' : '#8C7B74' }}>{count}</span>
+                <span style={{ color: isActive ? 'rgba(255,255,255,0.55)' : '#896B5E' }}>{count}</span>
               </button>
             );
           })}
         </div>
 
-        <div className="rounded-xl overflow-hidden" style={{ border: '1px solid #E8D5D0' }}>
+        <div className="rounded-xl overflow-hidden" style={{ border: '1px solid #EDD0C0' }}>
           {loading ? (
-            <div className="py-16 text-center text-sm" style={{ backgroundColor: '#fff', color: '#8C7B74' }}>
+            <div className="py-16 text-center text-sm" style={{ backgroundColor: '#fff', color: '#896B5E' }}>
               Loading quotes…
             </div>
           ) : (
             <table className="w-full text-sm">
               <thead>
-                <tr style={{ backgroundColor: '#F0EAE0', borderBottom: '1px solid #E8D5D0' }}>
+                <tr style={{ backgroundColor: '#F5ECE4', borderBottom: '1px solid #EDD0C0' }}>
                   {['Quote ID', 'Customer', 'Date', 'Items', 'Total', 'Status', ''].map(h => (
-                    <th key={h} className="text-left px-5 py-3 font-medium" style={{ color: '#8C7B74' }}>{h}</th>
+                    <th key={h} className="text-left px-5 py-3 font-medium" style={{ color: '#896B5E' }}>{h}</th>
                   ))}
                 </tr>
               </thead>
               <tbody style={{ backgroundColor: '#fff' }}>
                 {filtered.length === 0 ? (
                   <tr>
-                    <td colSpan={7} className="px-5 py-12 text-center text-sm" style={{ color: '#8C7B74' }}>
+                    <td colSpan={7} className="px-5 py-12 text-center text-sm" style={{ color: '#896B5E' }}>
                       {quotes.length === 0
-                        ? <>No quotes yet. <Link href="/admin/create-quote" style={{ color: '#C9A09A' }}>Create your first one →</Link></>
+                        ? <>No quotes yet. <Link href="/admin/create-quote" style={{ color: '#C8705A' }}>Create your first one →</Link></>
                         : 'No quotes match this filter.'}
                     </td>
                   </tr>
                 ) : filtered.map((q, i) => {
                   const s = statusStyle[q.status as QuoteStatus] ?? statusStyle['Draft'];
                   return (
-                    <tr key={q.id} style={{ borderBottom: i < filtered.length - 1 ? '1px solid #F0EAE0' : 'none' }}>
+                    <tr key={q.id} style={{ borderBottom: i < filtered.length - 1 ? '1px solid #F5ECE4' : 'none' }}>
                       <td className="px-5 py-3.5">
                         <Link href={`/admin/quotes/${q.id}`}
                           className="font-mono text-xs font-medium hover:underline"
-                          style={{ color: '#A0706A' }}>
+                          style={{ color: '#A8522E' }}>
                           {q.quote_number}
                         </Link>
                       </td>
                       <td className="px-5 py-3.5">
-                        <div className="font-medium" style={{ color: '#3D2B20' }}>{q.customers?.company ?? '—'}</div>
-                        <div className="text-xs" style={{ color: '#8C7B74' }}>{q.customers?.contact ?? ''}</div>
+                        <div className="font-medium" style={{ color: '#2D1912' }}>{q.customers?.company ?? '—'}</div>
+                        <div className="text-xs" style={{ color: '#896B5E' }}>{q.customers?.contact ?? ''}</div>
                       </td>
-                      <td className="px-5 py-3.5" style={{ color: '#8C7B74' }}>
+                      <td className="px-5 py-3.5" style={{ color: '#896B5E' }}>
                         {new Date(q.date).toLocaleDateString('en-MY', { day: 'numeric', month: 'short', year: 'numeric' })}
                       </td>
-                      <td className="px-5 py-3.5" style={{ color: '#8C7B74' }}>—</td>
-                      <td className="px-5 py-3.5 font-medium" style={{ color: '#3D2B20' }}>—</td>
+                      <td className="px-5 py-3.5" style={{ color: '#896B5E' }}>—</td>
+                      <td className="px-5 py-3.5 font-medium" style={{ color: '#2D1912' }}>—</td>
                       <td className="px-5 py-3.5">
                         <select
                           value={q.status}
@@ -170,7 +170,7 @@ export default function QuoteRecordsPage() {
                           onClick={() => handlePreview(q)}
                           disabled={loadingId === q.id}
                           className="text-xs font-medium px-2.5 py-1 rounded-md disabled:opacity-50"
-                          style={{ backgroundColor: '#F0EAE0', color: '#6B4C40', border: '1px solid #E8D5D0' }}
+                          style={{ backgroundColor: '#F5ECE4', color: '#5A3828', border: '1px solid #EDD0C0' }}
                         >
                           {loadingId === q.id ? '…' : 'Preview'}
                         </button>
