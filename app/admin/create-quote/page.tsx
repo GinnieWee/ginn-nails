@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import { useEffect, useState } from 'react';
 import {
   fetchCustomers, createQuoteWithItems,
@@ -15,13 +15,13 @@ const SERVICE_OPTIONS = [
 type LineItem = { id: number; service: string; qty: number; unitPrice: number };
 
 const INPUT: React.CSSProperties = {
-  width: '100%', backgroundColor: '#FAF5F0', border: '1px solid #EDD0C0',
-  color: '#2D1912', fontSize: '0.875rem', borderRadius: '0.5rem',
+  width: '100%', backgroundColor: '#FAF7F2', border: '1px solid #E8D5D0',
+  color: '#3D2B20', fontSize: '0.875rem', borderRadius: '0.5rem',
   padding: '0.625rem 0.75rem', outline: 'none',
 };
 
 const SECTION: React.CSSProperties = {
-  backgroundColor: '#fff', border: '1px solid #EDD0C0',
+  backgroundColor: '#fff', border: '1px solid #E8D5D0',
   borderRadius: '0.75rem', padding: '1.5rem',
 };
 
@@ -109,21 +109,21 @@ export default function CreateQuotePage() {
           </svg>
         </div>
         <h2 className="text-xl font-semibold mb-1"
-          style={{ fontFamily: 'var(--font-serif)', color: '#2D1912' }}>
+          style={{ fontFamily: 'var(--font-serif)', color: '#3D2B20' }}>
           Quote Saved
         </h2>
-        <p className="text-sm mb-1" style={{ color: '#896B5E' }}>
-          <span className="font-mono" style={{ color: '#A8522E' }}>{savedQuoteNum}</span> saved for{' '}
-          <span style={{ color: '#5A3828', fontWeight: 500 }}>{selectedCustomer?.company}</span>.
+        <p className="text-sm mb-1" style={{ color: '#8C7B74' }}>
+          <span className="font-mono" style={{ color: '#A0706A' }}>{savedQuoteNum}</span> saved for{' '}
+          <span style={{ color: '#6B4C40', fontWeight: 500 }}>{selectedCustomer?.company}</span>.
         </p>
-        <p className="text-xs mb-6" style={{ color: '#C8705A' }}>Total: {fmt(total)}</p>
+        <p className="text-xs mb-6" style={{ color: '#C9A09A' }}>Total: {fmt(total)}</p>
         <div className="flex gap-3">
           <button onClick={resetForm} className="px-4 py-2 text-sm font-medium rounded-lg"
-            style={{ backgroundColor: '#2D1912', color: '#fff' }}>
+            style={{ backgroundColor: '#3D2B20', color: '#fff' }}>
             Create Another
           </button>
           <a href="/admin/quotes" className="px-4 py-2 text-sm font-medium rounded-lg"
-            style={{ backgroundColor: '#F5ECE4', color: '#2D1912', border: '1px solid #EDD0C0' }}>
+            style={{ backgroundColor: '#F0EAE0', color: '#3D2B20', border: '1px solid #E8D5D0' }}>
             View All Quotes
           </a>
         </div>
@@ -138,16 +138,16 @@ export default function CreateQuotePage() {
       <div className="p-8 max-w-3xl">
         <div className="flex items-start justify-between mb-8">
           <div>
-            <h1 className="text-2xl font-semibold" style={{ fontFamily: 'var(--font-serif)', color: '#2D1912' }}>
+            <h1 className="text-2xl font-semibold" style={{ fontFamily: 'var(--font-serif)', color: '#3D2B20' }}>
               Create Quote
             </h1>
-            <p className="text-sm mt-1" style={{ color: '#896B5E' }}>
+            <p className="text-sm mt-1" style={{ color: '#8C7B74' }}>
               Fill in the details below to generate a new quote.
             </p>
           </div>
           <button onClick={handlePreview} disabled={!canSave}
             className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg disabled:opacity-40"
-            style={{ backgroundColor: '#F5ECE4', color: '#5A3828', border: '1px solid #EDD0C0' }}>
+            style={{ backgroundColor: '#F0EAE0', color: '#6B4C40', border: '1px solid #E8D5D0' }}>
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"
               strokeLinecap="round" strokeLinejoin="round">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
@@ -160,12 +160,12 @@ export default function CreateQuotePage() {
         <div className="space-y-5">
           {/* Quote Details */}
           <div style={SECTION}>
-            <h2 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#896B5E' }}>
+            <h2 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#8C7B74' }}>
               Quote Details
             </h2>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-medium mb-1.5" style={{ color: '#5A3828' }}>Customer *</label>
+                <label className="block text-xs font-medium mb-1.5" style={{ color: '#6B4C40' }}>Customer *</label>
                 <select value={customerId} onChange={e => setCustomerId(e.target.value)} style={INPUT}>
                   <option value="" disabled>Select a customer…</option>
                   {customers.map(c => (
@@ -174,7 +174,7 @@ export default function CreateQuotePage() {
                 </select>
               </div>
               <div>
-                <label className="block text-xs font-medium mb-1.5" style={{ color: '#5A3828' }}>Quote Date</label>
+                <label className="block text-xs font-medium mb-1.5" style={{ color: '#6B4C40' }}>Quote Date</label>
                 <input type="date" value={quoteDate} onChange={e => setQuoteDate(e.target.value)} style={INPUT} />
               </div>
             </div>
@@ -182,14 +182,14 @@ export default function CreateQuotePage() {
 
           {/* Services */}
           <div style={SECTION}>
-            <h2 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#896B5E' }}>
+            <h2 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#8C7B74' }}>
               Services
             </h2>
 
             <div className="grid grid-cols-12 gap-3 px-1 mb-2">
               {['Service', 'Qty', 'Unit Price (RM)', ''].map((h, i) => (
                 <div key={i} className={`text-xs font-medium ${i === 0 ? 'col-span-6' : i === 1 ? 'col-span-2' : i === 2 ? 'col-span-3' : 'col-span-1'}`}
-                  style={{ color: '#896B5E' }}>{h}</div>
+                  style={{ color: '#8C7B74' }}>{h}</div>
               ))}
             </div>
 
@@ -213,7 +213,7 @@ export default function CreateQuotePage() {
                   </div>
                   <div className="col-span-1 flex justify-center">
                     <button onClick={() => removeItem(item.id)} disabled={items.length === 1}
-                      className="disabled:opacity-20 disabled:pointer-events-none" style={{ color: '#C8705A' }}>
+                      className="disabled:opacity-20 disabled:pointer-events-none" style={{ color: '#C9A09A' }}>
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"
                         strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="3 6 5 6 21 6" />
@@ -226,36 +226,36 @@ export default function CreateQuotePage() {
             </div>
 
             <button onClick={addItem} className="mt-4 text-sm font-medium flex items-center gap-1.5"
-              style={{ color: '#A8522E' }}>
+              style={{ color: '#A0706A' }}>
               <span className="text-lg leading-none">+</span> Add Line Item
             </button>
 
             {/* Totals */}
-            <div className="mt-6 pt-4 space-y-2" style={{ borderTop: '1px solid #F5ECE4' }}>
+            <div className="mt-6 pt-4 space-y-2" style={{ borderTop: '1px solid #F0EAE0' }}>
               {[['Subtotal', fmt(subtotal)], ['SST (6%)', fmt(tax)]].map(([l, v]) => (
                 <div key={l} className="flex justify-between text-sm">
-                  <span style={{ color: '#896B5E' }}>{l}</span>
-                  <span style={{ color: '#2D1912' }}>{v}</span>
+                  <span style={{ color: '#8C7B74' }}>{l}</span>
+                  <span style={{ color: '#3D2B20' }}>{v}</span>
                 </div>
               ))}
               <div className="flex justify-between text-base font-bold pt-2"
-                style={{ borderTop: '2px solid #EDD0C0' }}>
-                <span style={{ color: '#2D1912' }}>Total</span>
-                <span style={{ color: '#A8522E' }}>{fmt(total)}</span>
+                style={{ borderTop: '2px solid #E8D5D0' }}>
+                <span style={{ color: '#3D2B20' }}>Total</span>
+                <span style={{ color: '#A0706A' }}>{fmt(total)}</span>
               </div>
             </div>
           </div>
 
           {/* Notes */}
           <div style={SECTION}>
-            <h2 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#896B5E' }}>Notes</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#8C7B74' }}>Notes</h2>
             <textarea value={notes} onChange={e => setNotes(e.target.value)} rows={3}
               placeholder="Add any notes or special instructions for this quote…"
               style={{ ...INPUT, resize: 'none' }} />
           </div>
 
           {!customerId && (
-            <p className="text-xs" style={{ color: '#C8705A' }}>
+            <p className="text-xs" style={{ color: '#C9A09A' }}>
               ↑ Select a customer to enable saving and invoice preview.
             </p>
           )}
@@ -270,7 +270,7 @@ export default function CreateQuotePage() {
           <div className="flex gap-3 pt-1">
             <button onClick={() => handleSave('Draft')} disabled={!canSave || saving}
               className="px-5 py-2.5 text-sm font-medium rounded-lg disabled:opacity-40 disabled:cursor-not-allowed"
-              style={{ backgroundColor: '#2D1912', color: '#fff' }}>
+              style={{ backgroundColor: '#3D2B20', color: '#fff' }}>
               {saving ? 'Saving…' : 'Save as Draft'}
             </button>
             <button onClick={() => handleSave('Sent')} disabled={!canSave || saving}
@@ -279,7 +279,7 @@ export default function CreateQuotePage() {
               {saving ? 'Saving…' : 'Save & Mark as Sent'}
             </button>
             <a href="/admin" className="px-5 py-2.5 text-sm font-medium rounded-lg"
-              style={{ backgroundColor: '#F5ECE4', color: '#5A3828', border: '1px solid #EDD0C0' }}>
+              style={{ backgroundColor: '#F0EAE0', color: '#6B4C40', border: '1px solid #E8D5D0' }}>
               Cancel
             </a>
           </div>

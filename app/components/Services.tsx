@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
 const serviceCards = [
@@ -65,20 +65,20 @@ const categories = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-[#F5ECE4] py-24">
+    <section id="services" className="bg-[#F0EAE0] py-24">
       <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
         <ScrollReveal className="mb-6 text-center">
-          <p className="text-[10px] uppercase tracking-[0.35em] text-[#C8705A] mb-3">What We Offer</p>
-          <h2 className="text-4xl font-bold text-[#2D1912]" style={{ fontFamily: "var(--font-serif)" }}>
+          <p className="text-[10px] uppercase tracking-[0.35em] text-[#C9A09A] mb-3">What We Offer</p>
+          <h2 className="text-4xl font-bold text-[#3D2B20]" style={{ fontFamily: "var(--font-serif)" }}>
             Our Services
           </h2>
-          <div className="mt-4 mx-auto w-12 h-0.5 bg-[#C8705A]" />
+          <div className="mt-4 mx-auto w-12 h-0.5 bg-[#C9A09A]" />
         </ScrollReveal>
 
         {/* Intro paragraph */}
         <ScrollReveal className="mb-14 text-center max-w-xl mx-auto">
-          <p className="text-sm text-[#5A3828] leading-relaxed">
+          <p className="text-sm text-[#6B4C40] leading-relaxed">
             From everyday gel polish to intricate nail art and spa treatments — everything is done with care, precision, and a personal touch. Pick a service below and let us do the rest.
           </p>
         </ScrollReveal>
@@ -95,10 +95,10 @@ export default function Services() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2D1912]/80 via-[#2D1912]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#3D2B20]/80 via-[#3D2B20]/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <p className="text-sm font-bold text-white" style={{ fontFamily: "var(--font-serif)" }}>{card.name}</p>
-                  <p className="text-[11px] text-[#EDD0C0] mt-1 leading-relaxed">{card.description}</p>
+                  <p className="text-[11px] text-[#E8D5D0] mt-1 leading-relaxed">{card.description}</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -107,11 +107,11 @@ export default function Services() {
 
         {/* Price list header */}
         <ScrollReveal className="mb-10 text-center">
-          <p className="text-[10px] uppercase tracking-[0.35em] text-[#C8705A] mb-3">Transparent Pricing</p>
-          <h3 className="text-3xl font-bold text-[#2D1912]" style={{ fontFamily: "var(--font-serif)" }}>
+          <p className="text-[10px] uppercase tracking-[0.35em] text-[#C9A09A] mb-3">Transparent Pricing</p>
+          <h3 className="text-3xl font-bold text-[#3D2B20]" style={{ fontFamily: "var(--font-serif)" }}>
             Price List
           </h3>
-          <div className="mt-4 mx-auto w-12 h-0.5 bg-[#C8705A]" />
+          <div className="mt-4 mx-auto w-12 h-0.5 bg-[#C9A09A]" />
         </ScrollReveal>
 
         <div className="flex flex-col gap-14">
@@ -119,22 +119,22 @@ export default function Services() {
             <div key={cat.category}>
               <ScrollReveal>
                 <div className="flex items-center gap-4 mb-6">
-                  <h3 className="text-2xl text-[#2D1912] italic" style={{ fontFamily: "var(--font-serif)" }}>
+                  <h3 className="text-2xl text-[#3D2B20] italic" style={{ fontFamily: "var(--font-serif)" }}>
                     {cat.category}
                   </h3>
-                  <div className="flex-1 h-px bg-[#C8705A]/40" />
+                  <div className="flex-1 h-px bg-[#C9A09A]/40" />
                 </div>
               </ScrollReveal>
 
               <div className="flex flex-col gap-3">
                 {cat.items.map((item, i) => (
                   <ScrollReveal key={item.name} delay={((i % 4) * 100) as 0 | 100 | 200 | 300}>
-                    <div className="bg-[#FAF5F0] rounded-xl px-6 py-4 flex items-start justify-between gap-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                    <div className="bg-[#FAF7F2] rounded-xl px-6 py-4 flex items-start justify-between gap-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
                       <div className="flex-1">
-                        <p className="font-semibold text-[#2D1912] text-sm">{item.name}</p>
-                        <p className="text-xs text-[#896B5E] mt-1 leading-relaxed">{item.description}</p>
+                        <p className="font-semibold text-[#3D2B20] text-sm">{item.name}</p>
+                        <p className="text-xs text-[#8C7B74] mt-1 leading-relaxed">{item.description}</p>
                       </div>
-                      <span className="text-sm font-semibold text-[#A8522E] whitespace-nowrap shrink-0">{item.price}</span>
+                      <span className="text-sm font-semibold text-[#A0706A] whitespace-nowrap shrink-0">{item.price}</span>
                     </div>
                   </ScrollReveal>
                 ))}
@@ -144,7 +144,7 @@ export default function Services() {
         </div>
 
         <ScrollReveal className="mt-10 text-center">
-          <p className="text-xs text-[#896B5E] tracking-wide">Prices are subject to change. Contact us for a personalised quote.</p>
+          <p className="text-xs text-[#8C7B74] tracking-wide">Prices are subject to change. Contact us for a personalised quote.</p>
         </ScrollReveal>
       </div>
     </section>

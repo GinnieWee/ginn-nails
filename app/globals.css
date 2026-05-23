@@ -1,14 +1,14 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 @theme {
-  --color-cream: #FAF5F0;
-  --color-beige: #F5ECE4;
-  --color-blush: #EDD0C0;
-  --color-rose: #C8705A;
-  --color-rose-dark: #A8522E;
-  --color-taupe: #2D1912;
-  --color-brown: #5A3828;
-  --color-muted: #896B5E;
+  --color-cream: #FAF7F2;
+  --color-beige: #F0EAE0;
+  --color-blush: #E8D5D0;
+  --color-rose: #C9A09A;
+  --color-rose-dark: #A0706A;
+  --color-taupe: #3D2B20;
+  --color-brown: #6B4C40;
+  --color-muted: #8C7B74;
 
   --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -27,8 +27,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #FAF5F0;
-  color: #2D1912;
+  background-color: #FAF7F2;
+  color: #3D2B20;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
@@ -125,7 +125,7 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background-color: #C8705A;
+  background-color: #C9A09A;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -146,11 +146,11 @@ body {
 .btn-shimmer {
   background: linear-gradient(
     105deg,
-    #2D1912 0%,
-    #2D1912 40%,
-    #C8705A 50%,
-    #2D1912 60%,
-    #2D1912 100%
+    #3D2B20 0%,
+    #3D2B20 40%,
+    #6B4C40 50%,
+    #3D2B20 60%,
+    #3D2B20 100%
   );
   background-size: 300% auto;
   transition: background-position 0s, transform 0.2s ease, box-shadow 0.2s ease;

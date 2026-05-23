@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
 const highlights = [
@@ -10,7 +10,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-[#2D1912] py-24">
+    <section id="about" className="bg-[#3D2B20] py-24">
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
@@ -27,33 +27,33 @@ export default function About() {
                 />
               </div>
               {/* Floating tag */}
-              <div className="absolute -bottom-5 -right-5 bg-[#FAF5F0] rounded-2xl px-6 py-4 shadow-lg">
-                <p className="text-[10px] uppercase tracking-widest text-[#896B5E] mb-1">Est.</p>
-                <p className="text-2xl font-bold text-[#2D1912]" style={{ fontFamily: "var(--font-serif)" }}>2022</p>
+              <div className="absolute -bottom-5 -right-5 bg-[#FAF7F2] rounded-2xl px-6 py-4 shadow-lg">
+                <p className="text-[10px] uppercase tracking-widest text-[#8C7B74] mb-1">Est.</p>
+                <p className="text-2xl font-bold text-[#3D2B20]" style={{ fontFamily: "var(--font-serif)" }}>2022</p>
               </div>
             </div>
           </ScrollReveal>
 
           {/* Right — text */}
           <ScrollReveal variant="right">
-            <p className="text-[10px] uppercase tracking-[0.35em] text-[#C8705A] mb-4">Our Story</p>
+            <p className="text-[10px] uppercase tracking-[0.35em] text-[#C9A09A] mb-4">Our Story</p>
             <h2 className="text-4xl font-bold text-white leading-tight mb-6" style={{ fontFamily: "var(--font-serif)" }}>
               A quiet studio<br />
-              <span className="italic text-[#C8705A]">built for you</span>
+              <span className="italic text-[#C9A09A]">built for you</span>
             </h2>
-            <p className="text-sm text-[#896B5E] leading-relaxed mb-5">
+            <p className="text-sm text-[#8C7B74] leading-relaxed mb-5">
               Le Ginn&apos;s Nails started with a simple belief — every person deserves to feel beautiful, cared for, and unhurried. We created a calm, intimate space where nail craft meets genuine care.
             </p>
-            <p className="text-sm text-[#896B5E] leading-relaxed mb-10">
+            <p className="text-sm text-[#8C7B74] leading-relaxed mb-10">
               Every visit is personal. We take the time to understand what you want, use quality products, and make sure you leave loving your nails. No rush, no compromise.
             </p>
 
             {/* Stats grid */}
             <div className="grid grid-cols-2 gap-5">
               {highlights.map((h) => (
-                <div key={h.label} className="bg-[#3A2216] rounded-2xl px-5 py-4">
-                  <p className="text-2xl font-bold text-[#C8705A]" style={{ fontFamily: "var(--font-serif)" }}>{h.label}</p>
-                  <p className="text-xs text-[#896B5E] mt-1 uppercase tracking-wider">{h.desc}</p>
+                <div key={h.label} className="bg-[#4A3728] rounded-2xl px-5 py-4">
+                  <p className="text-2xl font-bold text-[#C9A09A]" style={{ fontFamily: "var(--font-serif)" }}>{h.label}</p>
+                  <p className="text-xs text-[#8C7B74] mt-1 uppercase tracking-wider">{h.desc}</p>
                 </div>
               ))}
             </div>
