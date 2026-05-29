@@ -1,9 +1,9 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Gallery from "./components/Gallery";
 import OurServices from "./components/OurServices";
 import Services from "./components/Services";
 import Reviews from "./components/Reviews";
-import Gallery from "./components/Gallery";
 import InstagramCTA from "./components/InstagramCTA";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
@@ -15,10 +15,10 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Gallery />
         <OurServices />
         <Services />
         <Reviews />
-        <Gallery />
         <InstagramCTA />
         <ContactForm />
       </main>
