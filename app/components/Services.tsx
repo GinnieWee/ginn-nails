@@ -1,38 +1,4 @@
-import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
-
-const serviceCards = [
-  {
-    name: "Gel Manicure",
-    description: "Long-lasting shine with chip-free colour that stays perfect for weeks.",
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80&auto=format&fit=crop",
-  },
-  {
-    name: "Nail Extension",
-    description: "Add length and shape with elegant acrylic or soft-gel extensions.",
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80&auto=format&fit=crop&crop=top",
-  },
-  {
-    name: "Nail Art",
-    description: "Hand-painted designs from minimalist florals to intricate patterns.",
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80&auto=format&fit=crop&crop=bottom",
-  },
-  {
-    name: "Pedicure",
-    description: "Relaxing care for soft, healthy feet — gel polish or classic finish.",
-    img: "https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?w=400&q=80&auto=format&fit=crop",
-  },
-  {
-    name: "Callus Treatment",
-    description: "Spa soak · callus removal · leg scrub · whitening mask · lotion.",
-    img: "https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?w=400&q=80&auto=format&fit=crop&crop=top",
-  },
-  {
-    name: "Swarovski & Accessories",
-    description: "Premium crystals, charms and decorative accents for a luxe finish.",
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80&auto=format&fit=crop&crop=faces",
-  },
-];
 
 const categories = [
   {
@@ -65,52 +31,14 @@ const categories = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-[#F0EAE0] py-24">
+    <section id="pricelist" className="bg-[#F0EAE0] py-24">
       <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
-        <ScrollReveal className="mb-6 text-center">
-          <p className="text-[10px] uppercase tracking-[0.35em] text-[#C9A09A] mb-3">What We Offer</p>
-          <h2 className="text-4xl font-bold text-[#3D2B20]" style={{ fontFamily: "var(--font-serif)" }}>
-            Our Services
-          </h2>
-          <div className="mt-4 mx-auto w-12 h-0.5 bg-[#C9A09A]" />
-        </ScrollReveal>
-
-        {/* Intro paragraph */}
-        <ScrollReveal className="mb-14 text-center max-w-xl mx-auto">
-          <p className="text-sm text-[#6B4C40] leading-relaxed">
-            From everyday gel polish to intricate nail art and spa treatments — everything is done with care, precision, and a personal touch. Pick a service below and let us do the rest.
-          </p>
-        </ScrollReveal>
-
-        {/* Service photo cards */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mb-20">
-          {serviceCards.map((card, i) => (
-            <ScrollReveal key={card.name} delay={((i % 3) * 100) as 0 | 100 | 200}>
-              <div className="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-sm hover:shadow-lg transition-shadow duration-300">
-                <Image
-                  src={card.img}
-                  alt={card.name}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#3D2B20]/80 via-[#3D2B20]/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <p className="text-sm font-bold text-white" style={{ fontFamily: "var(--font-serif)" }}>{card.name}</p>
-                  <p className="text-[11px] text-[#E8D5D0] mt-1 leading-relaxed">{card.description}</p>
-                </div>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-
-        {/* Price list header */}
-        <ScrollReveal className="mb-10 text-center">
+        <ScrollReveal className="mb-16 text-center">
           <p className="text-[10px] uppercase tracking-[0.35em] text-[#C9A09A] mb-3">Transparent Pricing</p>
-          <h3 className="text-3xl font-bold text-[#3D2B20]" style={{ fontFamily: "var(--font-serif)" }}>
-            Price List
-          </h3>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3D2B20]" style={{ fontFamily: "var(--font-serif)" }}>
+            Price <span className="italic text-[#C9A09A]">List</span>
+          </h2>
           <div className="mt-4 mx-auto w-12 h-0.5 bg-[#C9A09A]" />
         </ScrollReveal>
 

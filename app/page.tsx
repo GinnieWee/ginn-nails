@@ -1,13 +1,13 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import WhyUs from "./components/WhyUs";
+import OurServices from "./components/OurServices";
 import Services from "./components/Services";
 import Reviews from "./components/Reviews";
 import Gallery from "./components/Gallery";
-import About from "./components/About";
 import InstagramCTA from "./components/InstagramCTA";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -15,15 +15,15 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <WhyUs />
+        <OurServices />
         <Services />
         <Reviews />
         <Gallery />
-        <About />
         <InstagramCTA />
         <ContactForm />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }
