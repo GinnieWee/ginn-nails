@@ -70,8 +70,8 @@ export default function Hero() {
           {/* Main photo card */}
           <div className="w-72 h-[420px] rounded-3xl overflow-hidden relative shadow-lg">
             <Image
-              src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=85&auto=format&fit=crop"
-              alt="Beautiful gel manicure"
+              src="/nails-top.jpg"
+              alt="Le Ginn's Nails — crystal nail art"
               fill
               className="object-cover"
               priority
