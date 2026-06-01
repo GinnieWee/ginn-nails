@@ -48,7 +48,7 @@ export default function Gallery() {
           <ScrollReveal className="row-span-2" variant="scale" delay={0}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-full min-h-[480px]">
               <Image src={photos[0].src} alt={photos[0].alt} fill
-                className="object-cover object-top" sizes="33vw" />
+                className="object-cover object-center" sizes="33vw" />
             </div>
           </ScrollReveal>
 
@@ -64,7 +64,7 @@ export default function Gallery() {
           <ScrollReveal variant="scale" delay={200}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[2].src} alt={photos[2].alt} fill
-                className="object-cover" sizes="33vw" />
+                className="object-cover object-bottom" sizes="33vw" />
             </div>
           </ScrollReveal>
 
