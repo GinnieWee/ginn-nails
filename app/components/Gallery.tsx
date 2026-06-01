@@ -7,13 +7,7 @@ const photos = [
   { src: "/portfolio/nail-8.jpg",  alt: "Crystal glitter stiletto nails" },
   { src: "/portfolio/nail-9.jpg",  alt: "Elegant nail art design" },
   { src: "/portfolio/nail-10.jpg", alt: "Delicate nail art" },
-  { src: "/portfolio/nail-1.jpg",  alt: "Classic gel manicure" },
-  { src: "/portfolio/nail-2.jpg",  alt: "Soft nail design" },
-  { src: "/portfolio/nail-3.jpg",  alt: "Artistic nail design" },
-  { src: "/portfolio/nail-4.jpg",  alt: "Elegant nail extension" },
-  { src: "/portfolio/nail-5.jpg",  alt: "Premium nail art" },
 ];
-
 
 export default function Gallery() {
   return (
@@ -47,88 +41,46 @@ export default function Gallery() {
           </ScrollReveal>
         </div>
 
-        {/* 3-column masonry-style grid */}
+        {/* Grid: tall left + 4 squares + full-width CTA */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
 
-          {/* Row 1: tall left + 2 square right */}
+          {/* Tall left — nail-6 */}
           <ScrollReveal className="row-span-2" variant="scale" delay={0}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-full min-h-[480px]">
               <Image src={photos[0].src} alt={photos[0].alt} fill
-                className="object-cover object-top"
-sizes="33vw" />
+                className="object-cover object-top" sizes="33vw" />
             </div>
           </ScrollReveal>
 
+          {/* Top middle — nail-7 */}
           <ScrollReveal variant="scale" delay={100}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[1].src} alt={photos[1].alt} fill
-                className="object-cover"
-sizes="33vw" />
+                className="object-cover" sizes="33vw" />
             </div>
           </ScrollReveal>
 
+          {/* Top right — nail-8 */}
           <ScrollReveal variant="scale" delay={200}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[2].src} alt={photos[2].alt} fill
-                className="object-cover"
-sizes="33vw" />
+                className="object-cover" sizes="33vw" />
             </div>
           </ScrollReveal>
 
+          {/* Bottom middle — nail-9 */}
           <ScrollReveal variant="scale" delay={300}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[3].src} alt={photos[3].alt} fill
-                className="object-cover"
-sizes="33vw" />
+                className="object-cover" sizes="33vw" />
             </div>
           </ScrollReveal>
 
+          {/* Bottom right — nail-10 */}
           <ScrollReveal variant="scale" delay={400}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[4].src} alt={photos[4].alt} fill
-                className="object-cover"
-sizes="33vw" />
-            </div>
-          </ScrollReveal>
-
-          {/* Row 2: 3 uniform squares */}
-          <ScrollReveal variant="scale" delay={100}>
-            <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
-              <Image src={photos[5].src} alt={photos[5].alt} fill
-                className="object-cover"
-sizes="33vw" />
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal variant="scale" delay={200}>
-            <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
-              <Image src={photos[6].src} alt={photos[6].alt} fill
-                className="object-cover"
-sizes="33vw" />
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal variant="scale" delay={300}>
-            <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
-              <Image src={photos[7].src} alt={photos[7].alt} fill
-                className="object-cover"
-sizes="33vw" />
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal variant="scale" delay={100}>
-            <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
-              <Image src={photos[8].src} alt={photos[8].alt} fill
-                className="object-cover"
-sizes="33vw" />
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal variant="scale" delay={200}>
-            <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
-              <Image src={photos[9].src} alt={photos[9].alt} fill
-                className="object-cover"
-sizes="33vw" />
+                className="object-cover" sizes="33vw" />
             </div>
           </ScrollReveal>
 
