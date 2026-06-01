@@ -2,24 +2,28 @@ import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
 const photos = [
-  { id: "1604654894610-df63bc536371", alt: "Gel manicure close-up" },
-  { id: "1632345031435-8727f6897d53", alt: "Nail art design" },
-  { id: "1610992015762-45dca7fa3a85", alt: "Pink manicure" },
-  { id: "1612887390768-fb02affea7a6", alt: "Nail extension" },
-  { id: "1607779097040-26e80aa78e66", alt: "Nail art detail" },
-  { id: "1519014816548-bf5fe059798b", alt: "Beautiful manicure" },
+  { src: "/portfolio/nail-1.jpg", alt: "Floral rose nail art with Swarovski crystals" },
+  { src: "/portfolio/nail-2.jpg", alt: "White French tips with gold glitter and bow" },
+  { src: "/portfolio/nail-3.jpg", alt: "Dark galaxy butterfly nail art" },
+  { src: "/portfolio/nail-4.jpg", alt: "Silver crystal Swarovski nails" },
+  { src: "/portfolio/nail-5.jpg", alt: "Deep navy blue floral rose nails" },
 ];
 
 export default function Gallery() {
   return (
     <section id="designs" className="bg-[#FAF7F2] py-24">
       <div className="max-w-5xl mx-auto px-6">
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <ScrollReveal>
             <p className="text-[10px] uppercase tracking-[0.35em] text-[#8C7B74] mb-4">Portfolio</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3D2B20] leading-tight" style={{ fontFamily: "var(--font-serif)" }}>
-              Our work,<br /><span className="italic text-[#C9A09A]">up close</span>
+            <h2
+              className="text-4xl md:text-5xl font-bold text-[#3D2B20] leading-tight"
+              style={{ fontFamily: "var(--font-serif)" }}
+            >
+              Our work,<br />
+              <span className="italic text-[#C9A09A]">up close</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal variant="right">
@@ -39,73 +43,93 @@ export default function Gallery() {
 
         {/* Asymmetric grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {/* Tall left */}
+
+          {/* Tall left — nail-1 (floral rose) */}
           <ScrollReveal className="row-span-2" variant="scale" delay={0}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-full min-h-[480px]">
               <Image
-                src={`https://images.unsplash.com/photo-${photos[0].id}?w=600&q=80&auto=format&fit=crop`}
-                alt={photos[0].alt} fill className="object-cover" sizes="33vw"
+                src={photos[0].src}
+                alt={photos[0].alt}
+                fill
+                className="object-cover object-top"
+                sizes="33vw"
               />
             </div>
           </ScrollReveal>
 
-          {/* Top right 1 */}
+          {/* Top middle — nail-2 (white bow) */}
           <ScrollReveal variant="scale" delay={100}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image
-                src={`https://images.unsplash.com/photo-${photos[1].id}?w=600&q=80&auto=format&fit=crop`}
-                alt={photos[1].alt} fill className="object-cover" sizes="33vw"
+                src={photos[1].src}
+                alt={photos[1].alt}
+                fill
+                className="object-cover"
+                sizes="33vw"
               />
             </div>
           </ScrollReveal>
 
-          {/* Top right 2 */}
+          {/* Top right — nail-3 (dark galaxy) */}
           <ScrollReveal variant="scale" delay={200}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image
-                src={`https://images.unsplash.com/photo-${photos[2].id}?w=600&q=80&auto=format&fit=crop`}
-                alt={photos[2].alt} fill className="object-cover" sizes="33vw"
+                src={photos[2].src}
+                alt={photos[2].alt}
+                fill
+                className="object-cover"
+                sizes="33vw"
               />
             </div>
           </ScrollReveal>
 
-          {/* Bottom right 1 */}
+          {/* Bottom middle — nail-4 (silver crystal) */}
           <ScrollReveal variant="scale" delay={300}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image
-                src={`https://images.unsplash.com/photo-${photos[4].id}?w=600&q=80&auto=format&fit=crop`}
-                alt={photos[4].alt} fill className="object-cover" sizes="33vw"
+                src={photos[3].src}
+                alt={photos[3].alt}
+                fill
+                className="object-cover"
+                sizes="33vw"
               />
             </div>
           </ScrollReveal>
 
-          {/* Bottom right 2 */}
+          {/* Bottom right — nail-5 (navy floral) */}
           <ScrollReveal variant="scale" delay={400}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image
-                src={`https://images.unsplash.com/photo-${photos[5].id}?w=600&q=80&auto=format&fit=crop`}
-                alt={photos[5].alt} fill className="object-cover" sizes="33vw"
+                src={photos[4].src}
+                alt={photos[4].alt}
+                fill
+                className="object-cover"
+                sizes="33vw"
               />
             </div>
           </ScrollReveal>
 
-          {/* Full-width CTA banner */}
+          {/* Full-width Book CTA banner */}
           <ScrollReveal className="col-span-2 md:col-span-3" delay={200}>
-            <div className="gallery-img relative overflow-hidden rounded-2xl h-[200px] bg-[#E8D5D0]">
-              <Image
-                src={`https://images.unsplash.com/photo-${photos[3].id}?w=1200&q=80&auto=format&fit=crop`}
-                alt={photos[3].alt} fill className="object-cover object-center" sizes="100vw"
+            <div className="relative overflow-hidden rounded-2xl h-[120px] bg-[#3D2B20] flex items-center justify-center">
+              {/* subtle texture overlay */}
+              <div className="absolute inset-0 opacity-10"
+                style={{ backgroundImage: "radial-gradient(circle at 30% 50%, #C9A09A 0%, transparent 60%), radial-gradient(circle at 70% 50%, #8C7B74 0%, transparent 60%)" }}
               />
-              <div className="absolute inset-0 bg-[#3D2B20]/40 flex items-center justify-center">
+              <div className="relative flex flex-col sm:flex-row items-center gap-5">
+                <p className="text-[#E8D5D0] text-sm tracking-wide" style={{ fontFamily: "var(--font-serif)" }}>
+                  Love what you see? Let&apos;s create your dream nails.
+                </p>
                 <a
                   href="#contact"
-                  className="px-8 py-3 rounded-full border border-white text-white text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-[#3D2B20] transition-all duration-300 hover:scale-105"
+                  className="px-7 py-2.5 rounded-full border border-[#C9A09A] text-[#C9A09A] text-xs uppercase tracking-[0.2em] hover:bg-[#C9A09A] hover:text-white transition-all duration-300 hover:scale-105 shrink-0"
                 >
                   Book Your Visit
                 </a>
               </div>
             </div>
           </ScrollReveal>
+
         </div>
       </div>
     </section>
