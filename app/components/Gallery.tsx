@@ -2,12 +2,20 @@ import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
 const photos = [
-  { src: "/portfolio/nail-1.jpg", alt: "Floral rose nail art with Swarovski crystals" },
-  { src: "/portfolio/nail-2.jpg", alt: "White French tips with gold glitter and bow" },
-  { src: "/portfolio/nail-3.jpg", alt: "Dark galaxy butterfly nail art" },
-  { src: "/portfolio/nail-4.jpg", alt: "Silver crystal Swarovski nails" },
-  { src: "/portfolio/nail-5.jpg", alt: "Deep navy blue floral rose nails" },
+  { src: "/portfolio/nail-6.jpg",  alt: "Floral rose nail art with Swarovski" },
+  { src: "/portfolio/nail-7.jpg",  alt: "Glitter citrus nail art" },
+  { src: "/portfolio/nail-8.jpg",  alt: "Crystal glitter stiletto nails" },
+  { src: "/portfolio/nail-9.jpg",  alt: "Elegant nail art design" },
+  { src: "/portfolio/nail-10.jpg", alt: "Delicate nail art" },
+  { src: "/portfolio/nail-1.jpg",  alt: "Classic gel manicure" },
+  { src: "/portfolio/nail-2.jpg",  alt: "Soft nail design" },
+  { src: "/portfolio/nail-3.jpg",  alt: "Artistic nail design" },
+  { src: "/portfolio/nail-4.jpg",  alt: "Elegant nail extension" },
+  { src: "/portfolio/nail-5.jpg",  alt: "Premium nail art" },
 ];
+
+// Consistent warm-soft filter applied to every image for a unified look
+const FILTER = "brightness(1.04) contrast(1.03) saturate(0.88) sepia(0.06)";
 
 export default function Gallery() {
   return (
@@ -41,78 +49,104 @@ export default function Gallery() {
           </ScrollReveal>
         </div>
 
-        {/* Asymmetric grid */}
+        {/* 3-column masonry-style grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
 
-          {/* Tall left — nail-1 (floral rose) */}
+          {/* Row 1: tall left + 2 square right */}
           <ScrollReveal className="row-span-2" variant="scale" delay={0}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-full min-h-[480px]">
-              <Image
-                src={photos[0].src}
-                alt={photos[0].alt}
-                fill
+              <Image src={photos[0].src} alt={photos[0].alt} fill
                 className="object-cover object-top"
-                sizes="33vw"
-              />
+                style={{ filter: FILTER }}
+                sizes="33vw" />
             </div>
           </ScrollReveal>
 
-          {/* Top middle — nail-2 (white bow) */}
           <ScrollReveal variant="scale" delay={100}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
-              <Image
-                src={photos[1].src}
-                alt={photos[1].alt}
-                fill
+              <Image src={photos[1].src} alt={photos[1].alt} fill
                 className="object-cover"
-                sizes="33vw"
-              />
+                style={{ filter: FILTER }}
+                sizes="33vw" />
             </div>
           </ScrollReveal>
 
-          {/* Top right — nail-3 (dark galaxy) */}
           <ScrollReveal variant="scale" delay={200}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
-              <Image
-                src={photos[2].src}
-                alt={photos[2].alt}
-                fill
+              <Image src={photos[2].src} alt={photos[2].alt} fill
                 className="object-cover"
-                sizes="33vw"
-              />
+                style={{ filter: FILTER }}
+                sizes="33vw" />
             </div>
           </ScrollReveal>
 
-          {/* Bottom middle — nail-4 (silver crystal) */}
           <ScrollReveal variant="scale" delay={300}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
-              <Image
-                src={photos[3].src}
-                alt={photos[3].alt}
-                fill
+              <Image src={photos[3].src} alt={photos[3].alt} fill
                 className="object-cover"
-                sizes="33vw"
-              />
+                style={{ filter: FILTER }}
+                sizes="33vw" />
             </div>
           </ScrollReveal>
 
-          {/* Bottom right — nail-5 (navy floral) */}
           <ScrollReveal variant="scale" delay={400}>
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
-              <Image
-                src={photos[4].src}
-                alt={photos[4].alt}
-                fill
+              <Image src={photos[4].src} alt={photos[4].alt} fill
                 className="object-cover"
-                sizes="33vw"
-              />
+                style={{ filter: FILTER }}
+                sizes="33vw" />
+            </div>
+          </ScrollReveal>
+
+          {/* Row 2: 3 uniform squares */}
+          <ScrollReveal variant="scale" delay={100}>
+            <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
+              <Image src={photos[5].src} alt={photos[5].alt} fill
+                className="object-cover"
+                style={{ filter: FILTER }}
+                sizes="33vw" />
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal variant="scale" delay={200}>
+            <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
+              <Image src={photos[6].src} alt={photos[6].alt} fill
+                className="object-cover"
+                style={{ filter: FILTER }}
+                sizes="33vw" />
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal variant="scale" delay={300}>
+            <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
+              <Image src={photos[7].src} alt={photos[7].alt} fill
+                className="object-cover"
+                style={{ filter: FILTER }}
+                sizes="33vw" />
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal variant="scale" delay={100}>
+            <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
+              <Image src={photos[8].src} alt={photos[8].alt} fill
+                className="object-cover"
+                style={{ filter: FILTER }}
+                sizes="33vw" />
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal variant="scale" delay={200}>
+            <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
+              <Image src={photos[9].src} alt={photos[9].alt} fill
+                className="object-cover"
+                style={{ filter: FILTER }}
+                sizes="33vw" />
             </div>
           </ScrollReveal>
 
           {/* Full-width Book CTA banner */}
           <ScrollReveal className="col-span-2 md:col-span-3" delay={200}>
             <div className="relative overflow-hidden rounded-2xl h-[120px] bg-[#3D2B20] flex items-center justify-center">
-              {/* subtle texture overlay */}
               <div className="absolute inset-0 opacity-10"
                 style={{ backgroundImage: "radial-gradient(circle at 30% 50%, #C9A09A 0%, transparent 60%), radial-gradient(circle at 70% 50%, #8C7B74 0%, transparent 60%)" }}
               />
