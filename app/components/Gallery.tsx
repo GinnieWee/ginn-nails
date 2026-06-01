@@ -14,8 +14,6 @@ const photos = [
   { src: "/portfolio/nail-5.jpg",  alt: "Premium nail art" },
 ];
 
-// Consistent warm-soft filter applied to every image for a unified look
-const FILTER = "brightness(1.04) contrast(1.03) saturate(0.88) sepia(0.06)";
 
 export default function Gallery() {
   return (
@@ -57,8 +55,7 @@ export default function Gallery() {
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-full min-h-[480px]">
               <Image src={photos[0].src} alt={photos[0].alt} fill
                 className="object-cover object-top"
-                style={{ filter: FILTER }}
-                sizes="33vw" />
+sizes="33vw" />
             </div>
           </ScrollReveal>
 
@@ -66,8 +63,7 @@ export default function Gallery() {
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[1].src} alt={photos[1].alt} fill
                 className="object-cover"
-                style={{ filter: FILTER }}
-                sizes="33vw" />
+sizes="33vw" />
             </div>
           </ScrollReveal>
 
@@ -75,8 +71,7 @@ export default function Gallery() {
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[2].src} alt={photos[2].alt} fill
                 className="object-cover"
-                style={{ filter: FILTER }}
-                sizes="33vw" />
+sizes="33vw" />
             </div>
           </ScrollReveal>
 
@@ -84,8 +79,7 @@ export default function Gallery() {
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[3].src} alt={photos[3].alt} fill
                 className="object-cover"
-                style={{ filter: FILTER }}
-                sizes="33vw" />
+sizes="33vw" />
             </div>
           </ScrollReveal>
 
@@ -93,8 +87,7 @@ export default function Gallery() {
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[4].src} alt={photos[4].alt} fill
                 className="object-cover"
-                style={{ filter: FILTER }}
-                sizes="33vw" />
+sizes="33vw" />
             </div>
           </ScrollReveal>
 
@@ -103,8 +96,7 @@ export default function Gallery() {
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[5].src} alt={photos[5].alt} fill
                 className="object-cover"
-                style={{ filter: FILTER }}
-                sizes="33vw" />
+sizes="33vw" />
             </div>
           </ScrollReveal>
 
@@ -112,8 +104,7 @@ export default function Gallery() {
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[6].src} alt={photos[6].alt} fill
                 className="object-cover"
-                style={{ filter: FILTER }}
-                sizes="33vw" />
+sizes="33vw" />
             </div>
           </ScrollReveal>
 
@@ -121,8 +112,7 @@ export default function Gallery() {
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[7].src} alt={photos[7].alt} fill
                 className="object-cover"
-                style={{ filter: FILTER }}
-                sizes="33vw" />
+sizes="33vw" />
             </div>
           </ScrollReveal>
 
@@ -130,8 +120,7 @@ export default function Gallery() {
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[8].src} alt={photos[8].alt} fill
                 className="object-cover"
-                style={{ filter: FILTER }}
-                sizes="33vw" />
+sizes="33vw" />
             </div>
           </ScrollReveal>
 
@@ -139,8 +128,7 @@ export default function Gallery() {
             <div className="gallery-img relative overflow-hidden rounded-2xl bg-[#E8D5D0] h-[230px]">
               <Image src={photos[9].src} alt={photos[9].alt} fill
                 className="object-cover"
-                style={{ filter: FILTER }}
-                sizes="33vw" />
+sizes="33vw" />
             </div>
           </ScrollReveal>
 
