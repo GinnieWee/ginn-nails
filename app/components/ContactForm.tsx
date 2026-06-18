@@ -37,8 +37,8 @@ export default function ContactForm() {
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    const nail  = "💅";
-    const spark = "✨";
+    const nail  = String.fromCodePoint(0x1F485); // 💅
+    const spark = String.fromCodePoint(0x2728);  // ✨
     const msg = [
       `Hi Le Ginn's Nails! ${nail}${spark}`,
       ``,
