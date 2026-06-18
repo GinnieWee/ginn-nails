@@ -10,12 +10,7 @@ export default function Hero() {
 
         {/* Left — staggered text entrance */}
         <div>
-          <p
-            className="text-[10px] uppercase tracking-[0.35em] text-[#C9A09A] mb-8"
-            style={{ animation: "fade-up 0.6s ease 0.1s both" }}
-          >
-            Nail Artist &nbsp;·&nbsp; Kuala Lumpur
-          </p>
+
           <h1
             className="text-[3.5rem] md:text-[4.5rem] font-bold leading-[1.05] text-[#3D2B20] mb-8"
             style={{ fontFamily: "var(--font-serif)" }}
